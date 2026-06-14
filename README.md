@@ -17,9 +17,9 @@ We fine-tune two vision-language models on Indian invoice data and benchmark the
 
 | Model | F1 (macro) | Latency p95 | VRAM | Training |
 |-------|-----------|-------------|------|----------|
-| Qwen2.5-VL-3B (QLoRA) | **97.1%** | ~7500ms | ~9 GB | 3 epochs, 537 steps |
-| Florence-2-base (fine-tuned) | **100.0%** | 221ms | ~0.9 GB | 5 epochs |
-| Florence-2-base (baseline) | 0.0% | 181ms | ~0.5 GB | — |
+| Qwen2.5-VL-3B (Fine-tuned) | **97.1%** | ~7500ms | ~9 GB | 3 epochs, 537 steps |
+| Florence-2 (Fine-tuned) | **100.0%** | 221ms | ~0.9 GB | 5 epochs |
+| Florence-2 (Pre-trained) | 0.0% | 181ms | ~0.5 GB | — |
 
 Evaluated on 10-sample validation set. Kaggle free T4 GPU (16 GB VRAM).
 Qwen loss: 16 → 0.1 over 3 epochs. Florence-2 loss: 4.0 → 0.10 over 5 epochs.
